@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext" 
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog 
+	http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+	<changeSet id="0f4b4aa1e5fada94a0c7c87be4f000cd8c250a17" author="(DEVSP)-Generated" failOnError="false"    >
+		<n0:createOracleProcedure objectName="EMP_DOWNGRADE" objectType="PROCEDURE" ownerName="DEVSP"   >
+			<n0:source><![CDATA[
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "DEVSP"."EMP_DOWNGRADE" as
+begin
+update emp set sal=sal/10;
+end emp_downgrade;
+]]></n0:source>
+		</n0:createOracleProcedure>
+	</changeSet>
+</databaseChangeLog>
